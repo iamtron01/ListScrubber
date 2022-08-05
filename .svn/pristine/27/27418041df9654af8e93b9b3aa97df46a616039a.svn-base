@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework> 
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ListScrubber.Common\ListScrubber.Common.fsproj" />
+    <ProjectReference Include="..\ListScrubber.Domain\ListScrubber.Domain.fsproj" />
+    <ProjectReference Include="..\ListScrubber.Infrastructure\ListScrubber.Infrastructure.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.7.2" />
+  </ItemGroup>
+</Project>

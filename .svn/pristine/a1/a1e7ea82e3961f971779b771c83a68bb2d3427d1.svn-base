@@ -1,0 +1,23 @@
+﻿namespace ListScrubber.Infrastructure
+
+open FSharp.Data
+
+module CsvRepository =
+
+    let read (path:string) =
+        CsvFile.Load(path)
+
+    let readMany (paths:string[]) =
+        paths 
+        |> Array.Parallel.map read
+
+module FileRepository =
+    let read (path:string) =
+        ()
+
+    let readMany (paths:string[]) =
+        paths
+        |> Array.Parallel.map read
+//readyMany may be too naive
+//Ask Q what he normally sees in CSV Files, are they homogenous on the left and right
+//https://stackoverflow.com/questions/52068377/f-merge-csv-files-with-different-columns
