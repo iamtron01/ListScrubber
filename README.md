@@ -1,2 +1,2 @@
 # ListScrubber
-Proof of concept appliation for scrubbing do not call lists.
+Proof of concept application for scrubbing do not call lists.
